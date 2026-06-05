@@ -58,13 +58,13 @@ if (!isset($_POST['setuju'])) {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #6366f1;
-            --primary-hover: #4f46e5;
-            --bg-color: #0f172a;
-            --glass-bg: rgba(30, 41, 59, 0.7);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
+            --primary: #007bff;
+            --primary-hover: #0056b3;
+            --bg-color: #f4f7f6;
+            --glass-bg: #ffffff;
+            --glass-border: #dddddd;
+            --text-main: #333333;
+            --text-muted: #666666;
         }
         * {
             margin: 0;
@@ -78,9 +78,6 @@ if (!isset($_POST['setuju'])) {
             justify-content: center;
             align-items: center;
             background-color: var(--bg-color);
-            background-image: 
-                radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 85% 30%, rgba(168, 85, 247, 0.15) 0%, transparent 50%);
             color: var(--text-main);
             overflow: hidden;
             padding: 20px;
@@ -90,11 +87,9 @@ if (!isset($_POST['setuju'])) {
             max-width: 400px;
             padding: 40px;
             background: var(--glass-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
             border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
             animation: fadeIn 0.5s ease;
         }
@@ -110,9 +105,7 @@ if (!isset($_POST['setuju'])) {
             font-size: 24px;
             font-weight: 600;
             margin-bottom: 10px;
-            background: linear-gradient(to right, #818cf8, #c084fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--text-main);
         }
         .header p {
             font-size: 15px;
@@ -123,19 +116,16 @@ if (!isset($_POST['setuju'])) {
             display: inline-block;
             width: 100%;
             padding: 14px;
-            background: linear-gradient(135deg, var(--primary), #8b5cf6);
+            background: var(--primary);
             color: white;
             text-decoration: none;
-            border-radius: 12px;
+            border-radius: 6px;
             font-size: 15px;
             font-weight: 500;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
         }
         .btn:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+            background: var(--primary-hover);
         }
     </style>
 </head>
