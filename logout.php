@@ -5,3 +5,4 @@ unset($_SESSION['is_logged_in']);
 header("Location:index.html");
 exit;
 ?>
+
