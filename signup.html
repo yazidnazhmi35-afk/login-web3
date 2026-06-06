@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - Create Account</title>
+    <title>Daftar - Buat Akun</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -196,28 +196,32 @@
 <body>
     <div class="signup-container">
         <div class="header">
-            <h1>Create Account</h1>
-            <p>Join us to get started.</p>
+            <h1>Buat Akun</h1>
+            <p>Bergabung untuk memulai.</p>
         </div>
         <form action="daftar.php" method="post">
             <div class="input-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Choose a username" required>
+                <input type="text" id="username" name="username" placeholder="nama pengguna" required>
             </div>
 
             <div class="row">
                 <div class="input-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
                 </div>
                 <div class="input-group">
                     <label for="asal">Asal</label>
                     <select id="asal" name="asal" required>
                         <option value="" disabled selected>Pilih Asal</option>
-                        <option value="Kendal Plosok">Kendal Plosok</option>
+                        <option value="Kendal">Kendal</option>
                         <option value="Semarang">Semarang</option>
                         <option value="Demak">Demak</option>
                         <option value="Salatiga">Salatiga</option>
+                        <option value="Solo">Solo</option>
+                        <option value="Surabaya">Surabaya</option>
+                        <option value="Yogyakarta">Yogyakarta</option>
+
                     </select>
                 </div>
             </div>
@@ -225,11 +229,11 @@
             <div class="row">
                 <div class="input-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Create password" required>
+                    <input type="password" id="password" name="password" placeholder="Masukan kata sandi" required>
                 </div>
                 <div class="input-group">
-                    <label for="password_ulang">Confirm</label>
-                    <input type="password" id="password_ulang" name="password_ulang" placeholder="Repeat password"
+                    <label for="password_ulang">Konfirmasi</label>
+                    <input type="password" id="password_ulang" name="password_ulang" placeholder="Konfirmasi kata sandi"
                         required>
                 </div>
             </div>
@@ -244,7 +248,7 @@
                 <button type="submit" class="btn btn-submit">Daftar</button>
             </div>
             <div class="footer-link">
-                Already have an account? <a href="index.html">Login here</a>
+                Sudah punya akun? <a href="index.html">Masuk di sini</a>
             </div>
         </form>
     </div>
