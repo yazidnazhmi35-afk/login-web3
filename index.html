@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Selamat Datang Kembali</title>
+    <title>Login - Project Web Yazid Nazhmi Azzaki</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -147,10 +148,11 @@
         }
     </style>
 </head>
+
 <body>
     <div class="login-container">
         <div class="header">
-            <h1>Selamat Datang Kembali</h1>
+            <h1>Silahkan Login Project Web Yazid Nazhmi Azzaki</h1>
             <p>Silakan masukkan detail Anda untuk masuk.</p>
         </div>
         <form action="login.php" method="post">
@@ -160,7 +162,8 @@
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="input_password" placeholder="Masukkan password Anda" required>
+                <input type="password" id="password" name="input_password" placeholder="Masukkan password Anda"
+                    required>
             </div>
             <div class="btn-container">
                 <button type="reset" class="btn btn-reset">Ulangi</button>
@@ -172,7 +175,7 @@
         </form>
     </div>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.has('error')) {
                 const errorDiv = document.createElement('div');
@@ -185,14 +188,15 @@
                 errorDiv.style.textAlign = 'center';
                 errorDiv.style.border = '1px solid rgba(239, 68, 68, 0.2)';
                 errorDiv.textContent = 'Username atau Password salah.';
-                
+
                 const form = document.querySelector('form');
                 form.parentNode.insertBefore(errorDiv, form);
-                
+
                 // Remove error from URL without reloading so it doesn't persist on refresh
                 window.history.replaceState({}, document.title, window.location.pathname);
             }
         });
     </script>
 </body>
+
 </html>
