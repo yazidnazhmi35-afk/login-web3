@@ -53,4 +53,19 @@ class User
 
         }
     }
+
+    public function hapus($id)
+    {
+        $stmt = $this->conn->prepare("DELETE FROM $this->table WHERE id = ?");
+        $stmt->bind_param("i", $id);
+
+        if ($stmt->execute()) {
+            $stmt->close();
+            return true;
+        } else {
+            $error = $stmt->error;
+            $stmt->close();
+            return $error;
+        }
+    }
 }

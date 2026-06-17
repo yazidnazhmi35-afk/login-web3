@@ -17,6 +17,7 @@
        
         <h2>Daftar Users</h2>
         <hr/>
+        <a href="index.php?halaman=tambah_user_form.php" class="btn btn-primary">Tambah User</a>
         <div class="table-responsive small">
           <table class="table table-striped table-sm">
             <thead>
@@ -39,7 +40,7 @@
                 <td><?php echo $user['email'];?></td>
                 <td><?php echo $user['asal'];?></td>
                 <td>
-                    delete | edit
+                    <a href = "delete_user.php?id=<?php echo $user['id'];?>">delete</a> | edit
               </tr>
               
               <?php
