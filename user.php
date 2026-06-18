@@ -65,7 +65,21 @@ class User
         } else {
             $error = $stmt->error;
             $stmt->close();
-            return $error;
         }
     }
-}
+
+    public function ambilUserdariId($id) {
+        $sql = "SELECT * FROM $this->table WHERE id = ".$id;
+            $result = $this->conn->query($sql);
+            return $result->fetch_assoc();
+        }
+
+    public function update($id, $username, $email, $asal, $password) {
+        $sql = "UPDATE $this->table SET
+        username='". $username . "', email='". $email . "', asal='". $asal . "', password='". $password . "' WHERE id= ".$id;
+
+            $this->conn->query($sql);
+            
+        }
+
+    }

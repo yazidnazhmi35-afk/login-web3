@@ -8,4 +8,4 @@
 
  $id = $_GET['id'];
  $user->hapus($id);
- header("Location: daftar_users.php");
+ header("Location: index.php?halaman=daftar_users.php");
