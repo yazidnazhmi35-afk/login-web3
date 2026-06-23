@@ -17,7 +17,13 @@
        
         <h2>Daftar Users</h2>
         <hr/>
-        <a href="index.php?halaman=tambah_user_form.php" class="btn btn-primary">Tambah User</a>
+        <?php if (isset($_SESSION['show_login_alert']) && $_SESSION['show_login_alert']): ?>
+            <div class="alert alert-success" role="alert">
+                Selamat Datang <?php echo htmlspecialchars($_SESSION['username']); ?> Anda telah login sebanyak <?php echo $_SESSION['login_count']; ?> kali
+            </div>
+            <?php unset($_SESSION['show_login_alert']); ?>
+        <?php endif; ?>
+        <a href="index.php?halaman=tambah_user_form.php" class="btn btn-primary mb-3">Tambah User</a>
         <div class="table-responsive small">
           <table class="table table-striped table-sm">
             <thead>
