@@ -21,7 +21,7 @@ if (!isset($_POST['input_username']) || !isset($_POST['input_password'])) {
         $_SESSION['is_logged_in'] = true;
         $_SESSION['username'] = $user['username'];
 
-        // Menggunakan cookie untuk melacak jumlah login tanpa database (berlaku 30 hari)
+
         $cookie_name = "login_count_" . preg_replace('/[^a-zA-Z0-9_]/', '', $user['username']);
         $count = isset($_COOKIE[$cookie_name]) ? $_COOKIE[$cookie_name] + 1 : 1;
         setcookie($cookie_name, $count, time() + (86400 * 30), "/"); 
